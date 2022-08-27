@@ -1,0 +1,7 @@
+.collections {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    padding: 20px 0;
+    justify-content: space-between;
+}

@@ -1,0 +1,147 @@
+.signIn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+   rgba(255, 255, 255, 0.5),
+   rgba(255, 255, 255, 0.5)
+  ),
+  url("../../assets/signInBackGround.jpg");
+  background-size: cover;
+}
+
+/*height of signInWrapper == height of signInLeft > img
+  to make image fit into wapper
+*/
+.signInWrapper {
+  height: 650px;
+  display: grid;
+  width: 1050px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.signInLeft {
+}
+/* !important height img  */
+.signInLeft > img {
+  height: 650px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.signInRight {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 40px;
+}
+
+.signInTitle {
+}
+
+.webName {
+  padding: 20px 0 40px 0;
+  text-align: center;
+}
+
+.signInWelcome {
+  padding: 20px;
+  text-align: center;
+  color: #34568B;
+}
+
+.signInForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.signInForm > label {
+  font-size: 12px;
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.signInForm > label > input {
+  margin: 5px 0;
+  padding: 2px;
+  border: none;
+  border-bottom: solid 1px black;
+  outline: none;
+  font-size: 16px;
+}
+
+.signInForgotPass {
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+  color: green;
+  margin-bottom: 30px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.signInForgotPass:hover {
+  color: black;
+}
+
+.signInBtn {
+  padding: 8px 60px;
+  border-radius: 20px;
+  border: none;
+  background: rgb(105, 102, 102);
+  color: white;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.signInOAuth2 {
+  text-align: center;
+  margin: 20px 0 40px 0; 
+}
+
+/* text center a line */
+.textCenterLine {
+  width: 80%;
+  margin: 10px auto;
+  height: 20px;
+  border-bottom: 1px solid rgb(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.textCenterLine > span {
+  position: absolute;
+  top: 8px;
+  font-size: 10px;
+  padding: 5px;
+  background-color: white;
+}
+/* end text center a line */
+
+.toSignUp {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.toSignUp > span {
+  color: green;
+}
+
+.toSignUp > span:hover {
+  color: #CD212A;
+}
+
+@media screen and (max-width:750px) {
+  .signInWrapper {
+    grid-template-columns: auto;
+    height: auto;
+  }
+}

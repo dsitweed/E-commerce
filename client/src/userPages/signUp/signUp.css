@@ -1,0 +1,107 @@
+.signUp {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+     rgba(255, 255, 255, 0.5),
+     rgba(255, 255, 255, 0.5)
+    ),
+    url("../../assets/signInBackGround.jpg");
+    background-size: cover;
+}
+
+/*height of signUpWrapper == height of signUpLeft > img
+  to make image fit into wapper
+*/
+.signUpWrapper {
+    height: 700px;
+    display: grid;
+    width: 1050px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.signUpLeft{}
+
+/* !important height img  */
+.signUpLeft > img {
+    height: 700px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.signUpRight {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 40px;
+}
+
+.signUpTitle{}
+
+.webName {
+    padding: 20px 0 40px 0;
+    text-align: center;
+}
+
+.signUpWelcome {
+    padding: 20px;
+    text-align: center;
+    color: #34568B;
+}
+
+.signUpForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.signUpForm > label {
+    font-size: 12px;
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.signUpForm > label > input {
+    margin: 5px 0;
+    padding: 2px;
+    border: none;
+    border-bottom: solid 1px black;
+    outline: none;
+    font-size: 16px;
+}
+
+.signUpBtn {
+    padding: 8px 60px;
+    border-radius: 20px;
+    border: none;
+    background: rgb(105, 102, 102);
+    color: white;
+    margin: 0 auto;
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.toSignIn {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+.toSignIn > span {
+    color: green;
+}
+
+.toSignIn > span:hover {
+    color: #CD212A;
+}
+
+@media screen and (max-width:750px) {
+    .signUpWrapper {
+      grid-template-columns: auto;
+      height: auto;
+    }
+}

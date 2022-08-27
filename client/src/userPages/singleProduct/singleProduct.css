@@ -1,0 +1,129 @@
+.singleProduct {
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+}
+
+.singleProductLeft {
+    padding: 0 20px;
+}
+
+.singleProductRight {
+    padding: 0 20px;
+}
+
+.singleProductLeft > img {
+    width: 100%;
+}
+
+.singleProductTags {
+    display: flex;
+}
+
+.singleProductTag {
+    border: 1px solid black;
+    padding: 2px;
+    margin-right: 3px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.singleProductName {
+    margin: 5px 0;
+}
+
+/* select color - Vẫn chưa ưng ý */
+.SPOptionColor {
+    display: flex;
+}
+
+.SPColor > input[type="radio"] {
+    display: none;
+}
+
+.SPColor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    padding: 2px;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.checkmark {
+    padding: 12px;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.SPColor input[type="radio"]:checked ~ .checkmark{
+    opacity: 1;
+}
+/* select color */
+.productPrice {
+    padding-left: 0;
+}
+.SPOptionSize {
+    padding: 8px 0;
+    font-size: 16px;
+}
+
+#SPSize {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.SPAddContainer {
+    
+}
+
+.SPAddAmount {
+    display: flex;
+    align-items: center ;
+    padding: 10px 0;
+}
+
+.SPAddAmount > * {
+    margin-right: 8px;
+}
+
+.SPAddAmount > input {
+    border: 1px solid black;
+    font-size: 18px;
+    text-align: center;
+    width: 40px;
+    color: black;
+}
+
+.SPAddIcon {
+    cursor: pointer;
+}
+
+.SPAddAction {
+
+}
+
+.SPAddBtn {
+    width: 200px;
+    padding: 10px;
+    margin-right: 10px;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.SPAddBtn:hover {
+    opacity: 0.8;
+}
+
+@media screen and (max-width:1050px) {
+    .singleProduct {
+        grid-template-columns: auto;
+    }
+
+    .singleProductLeft {
+        padding: 0;
+    }
+}

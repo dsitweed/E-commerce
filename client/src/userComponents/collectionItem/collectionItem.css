@@ -1,0 +1,40 @@
+.collection {
+    margin: 3px;
+    height: 70vh;
+    position: relative;
+}
+
+.collectionImg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* set to collectionInfo to exactly center of div */
+.collectionInfo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.collectionTitle {
+    color: white;
+    padding: 0 5px;
+    border-radius: 5px;
+    background-color: rgba(0,0,0, 0.6);
+    margin-bottom: 15px;
+}
+
+.collectionBtn {
+    border: none;
+    padding: 10px;
+    background-color: white;
+    color: gray;
+    font-weight: 600;
+}
