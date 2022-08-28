@@ -55,3 +55,17 @@ box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
 # Những điểm có thể update:
 
 - Ô nhập số lượng ở singleProduct có thể không cần ấn dấu + hoặc - mà có thể xóa và nhập trực tiếp trong khoảng giá trị (min - max có thể)
+
+exampleProduct = {
+    id: 1,
+    img: img1,
+    productName: "White T-shirt men",
+    tags: ["MEN'S CLOTHING", "T-shirt"],
+    oldprice: 200,
+    newprice: 109.95,
+    currency: "vnd",
+    quantity: 5,
+    size: 37,
+    color: "black",
+    description: "A T-shirt, or tee, is a style of fabric shirt named after the T shape of its body and sleeves.",
+};

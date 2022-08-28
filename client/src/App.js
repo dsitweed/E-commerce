@@ -17,6 +17,7 @@ import { ProductListUser } from "./userPages/productListUser/ProductListUser";
 import { SingleProduct } from "./userPages/singleProduct/SingleProduct";
 import { SignIn } from "./userPages/signIn/SignIn";
 import { SignUp } from "./userPages/signUp/SignUp";
+import { Cart } from "./userPages/cart/Cart";
  
 function App() {
   let admin = false; 
@@ -30,6 +31,7 @@ function App() {
             <Route path="/product/:productId" element={<SingleProduct />}/>
             <Route path="/signin" element={<SignIn />}/>
             <Route path="/signup" element={<SignUp />}/>
+            <Route path="/cart" element={<Cart />}/>
           </Route>
         </Routes>
     </div>

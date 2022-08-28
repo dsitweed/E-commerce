@@ -32,12 +32,12 @@ export const Navbar = () => {
                 </div>
             </div>
             <div className="navbarRight">
-                <div className="navbarIcon">
+                <Link to={"/cart"} className="navbarIcon">
                     {/* hard code - need update */}
                     <Badge badgeContent={4} color="error">
                         <ShoppingCartOutlined />
                     </Badge>
-                </div>
+                </Link>
                 <Link to={"/signin"} className="navbarSignin link">Sign in</Link>
                 <Link to={"/signup"} className="navbarSignup link">Sign up</Link>
             </div>
@@ -51,7 +51,7 @@ export const Navbar = () => {
                     <div className="navbarMenuContainer">
                         <div className="navbarMenuLinks">
                             <Link to={"/"} className="navbarLink">    
-                            Products
+                                Products
                             </Link>
                             <Link to={"/"} className="navbarLink">    
                                 Brands
@@ -64,12 +64,12 @@ export const Navbar = () => {
                             </Link>
                         </div>
                         <div className="navbarMenuSign">
-                            <div className="navbarIcon">
+                            <Link to={"/cart"} className="navbarIcon">
                                 {/* hard code - need update */}
                                 <Badge badgeContent={4} color="error">
                                     <ShoppingCartOutlined />
                                 </Badge>
-                            </div>
+                            </Link>
                             <Link to={"/signin"} className="navbarSignin link">Sign in</Link>
                             <Link to={"/signup"} className="navbarSignup link">Sign up</Link>   
                         </div>
