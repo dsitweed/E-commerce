@@ -52,10 +52,20 @@ box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
 ```
 
 
-# Những điểm có thể update:
+## Những điểm có thể update:
 
+- Đăng nhập bằng google 
+- sliderShow thêm các nút tròn ở dưới
+- thanh thông tin chạy ở trên đầu 
 - Ô nhập số lượng ở singleProduct có thể không cần ấn dấu + hoặc - mà có thể xóa và nhập trực tiếp trong khoảng giá trị (min - max có thể)
+- update lại trang cart giống lazada có thể chọn xóa 1 loại sản phẩm và xóa tất cả các sản phẩm (gồm tất cả các loại sản phẩm)
+- thống kê nhiều hơn ở phía admin  
 
+- Trang nhập hàng ở phía admin
+- trang forgot Password chưa có 
+- Trang tìm kiếm theo loại caterogy 
+
+## Ví dụ các trường dữ liệu có dùng trong project 
 exampleProduct = {
     id: 1,
     img: img1,

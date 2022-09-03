@@ -20,7 +20,7 @@ import { SignUp } from "./userPages/signUp/SignUp";
 import { Cart } from "./userPages/cart/Cart";
  
 function App() {
-  let admin = false; 
+  let admin = true; 
 
   let appUser = (
     <div className="App">
