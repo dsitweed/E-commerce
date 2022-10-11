@@ -18,11 +18,14 @@ import { SingleProduct } from "./userPages/singleProduct/SingleProduct";
 import { SignIn } from "./userPages/signIn/SignIn";
 import { SignUp } from "./userPages/signUp/SignUp";
 import { Cart } from "./userPages/cart/Cart";
+import { useSelector } from "react-redux";
+import { NotFound } from "./components/notFound/NotFound";
  
 function App() {
-  let admin = true; 
+  const admin = false; 
+  const user = useSelector((state) => state.user);
 
-  let appUser = (
+  const appUser = (
     <div className="App">
         <Routes>
           <Route path="/" element={<UserLayout />}>
@@ -33,11 +36,12 @@ function App() {
             <Route path="/signup" element={<SignUp />}/>
             <Route path="/cart" element={<Cart />}/>
           </Route>
+          <Route path="*" element={<NotFound />}/>
         </Routes>
     </div>
   );
 
-  let appAdmin = (
+  const appAdmin = (
     <div className="App">
           <Routes>
             {/* Wapper by Amind Layout includes: Topbar, Sidebar */}
@@ -57,7 +61,7 @@ function App() {
   );
 
   return (
-    admin ? appAdmin : appUser
+    user.isAdmin ? appAdmin : appUser
   );
 }
 

@@ -79,3 +79,14 @@ exampleProduct = {
     color: "black",
     description: "A T-shirt, or tee, is a style of fabric shirt named after the T shape of its body and sleeves.",
 };
+
+### Modules
+- Module thanh toán
+- Module đơn hàng 
+
+
+### Ghi chú:
+1. Các cách thanh toán
+- VOC shipper giao hàng, thu tiền và cập nhật lên hệ thống là đơn hàng này đã thanh toán hay chưa 
+- Thanh toán dựa vào voucher mà bên minh cung cấp mà không dựa vào bên thứ 3
+- Thánh toán trực tiếp bằng thẻ Visa 

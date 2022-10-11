@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Link } from "react-router-dom";
 
 import styles from "./cart.module.css";
 import img1 from "../../assets/img1.jpg";
 import { Add, DeleteOutline, Remove } from "@mui/icons-material";
+import { useSelector } from "react-redux";
 
 const exampleProduct = {
     id: 1,
@@ -20,14 +21,14 @@ const exampleProduct = {
     description: "A T-shirt, or tee, is a style of fabric shirt named after the T shape of its body and sleeves.",
 };
 
-const cart = {
-    cartNumber: 4,
-    wishlistNumber: 1,
-    products: [exampleProduct],
-}
+// const cart = {
+//     cartNumber: 4, // Số các sản phẩm khác nhau (có id khác nhau) trong cart 
+//     products: [exampleProduct],
+// }
 
 export const Cart = () => {
-    let bill = calcBill();
+    let cart = useSelector(state => state.cart);
+    let bill = calcBill(cart);
     
     return (
         <div className={styles.cart}>
@@ -60,9 +61,13 @@ export const Cart = () => {
                                 </div>
                                 <div className={styles.priceDetail}>
                                     <div className={styles.productAmountContainer}>
-                                        <Add className={styles.icon} disable/>
+                                        <Add className={styles.icon} 
+                                            onClick={() => {console.log(product.quantity)}}
+                                        />
                                         <span className={styles.productAmount}>{product.quantity}</span>
-                                        <Remove className={styles.icon} />
+                                        <Remove className={styles.icon} 
+                                            onClick={() => console.log()}
+                                        />
                                     </div>
                                     <div className={styles.productPrice}>
                                         <span className={styles.priceItem}>{product.currency} </span>
@@ -102,7 +107,7 @@ export const Cart = () => {
     );
 }
 
-function calcBill () {
+function calcBill (cart) {
     let allProductItems = 0;
     let allProductPrice = 0;  
     cart.products.map(item => {

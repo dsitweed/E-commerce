@@ -6,10 +6,11 @@ import { Link, useNavigate } from "react-router-dom";
 export const ProductItem = ({ item }) => {
     const navigate = useNavigate();
 
+
     return (
         // wapper of product is a Link => click => to /product/:productId
         // take data from database => ?
-        <Link className="productItem link" to={"/product/" + item.id}>
+        <div className="productItem" onClick={() => navigate("/product/" + item.id)}>
             <img src={item.img} alt="product Image" className="productImg" />
             <div className="productFilter">
                 <Link to={"/"} className="link productItemLink">
@@ -30,6 +31,6 @@ export const ProductItem = ({ item }) => {
                 <span className="oldPrice">{item.oldPrice}</span>
                 <span className="newPrice">{item.newPrice}</span>
             </div>
-        </Link>
+        </div>
     );
 }

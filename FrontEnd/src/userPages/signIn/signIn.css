@@ -131,11 +131,12 @@
   color: black;
 }
 
-.toSignUp > span {
+.toSignUp > * {
   color: green;
+  text-decoration: none;
 }
 
-.toSignUp > span:hover {
+.toSignUp > *:hover {
   color: #CD212A;
 }
 
